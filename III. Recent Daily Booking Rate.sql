@@ -7,7 +7,7 @@ where added > datetime('2017-07-11','-90 days')
 group by date  
 order by added desc 
 
-- Please find the result set below. 
+- Please find results below. 
 
 date,requests,booked,booking_rate
 10-07-2017,290,18,6
