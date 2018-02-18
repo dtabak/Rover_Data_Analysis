@@ -16,7 +16,7 @@ where p.test_name = 'New Conversation Flow' and
 p.test_group = 'variant' and
 c.cancelled_at is NULL
 
-- Please find the result set below. 
+- Please find results below. 
 
 The first row is the booking rate for holdout group and 
 the second row is the booking rate for the variant group. 
