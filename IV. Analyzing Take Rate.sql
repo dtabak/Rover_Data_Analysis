@@ -14,7 +14,7 @@ and c.cancelled_at is NULL
 group by (date) 
 order by (date) desc 
 
-- Please find the result set below. 
+- Please find results below. 
 
 date,booking_total,gross_billings,net_revenue
 2017-07,234691,250271,60277
@@ -60,7 +60,7 @@ and c.cancelled_at is NULL
 group by (date) 
 order by (date) desc 
 
-- Please find the result set below. 
+- Please find results below. 
 
 date,booking_total,gross_billings,net_revenue,take_rate
 2017-07,234691,250271,60277,24
