@@ -3,7 +3,7 @@
 select service_type,round(avg(price), 2) average_price_per_unit from services_service  
 group by service_type 
 
-- Please find the result set below. 
+- Please find results below. 
 
 service_type,average_price_per_unit
 boarding,34.51
@@ -19,7 +19,7 @@ join services_service s
 on c.service_id = s.id 
 group by s.service_type  
 
-- Please find the result set below. 
+- Please find results below. 
 
 service_type,requests,booked,booking_rate
 boarding,26665,10862,40
@@ -35,7 +35,7 @@ join services_service s
 on c.service_id = s.id 
 group by s.service_type  
 
-- Please find the result set below. 
+- Please find results below. 
 
 service_type,requests,booked,cancelled,cancellation_rate
 boarding,26665,10862,1051,9
@@ -44,9 +44,9 @@ dog-walking,26716,12811,1218,9
 
 4. For un-cancelled bookings, is the owner or provider more likely to leave a review and which tends to leave better reviews? 
 How would you narrate this finding to a business partner? 
-Feel free to use whatever ìproofî you need to share these findings (visualizations, graphs, talking points, etc.).  
+Feel free to use whatever ‚Äúproof‚Äù you need to share these findings (visualizations, graphs, talking points, etc.).  
 
-- Please find the result set below. 
+- Please find results below. 
 
 /* The total count of cases that a requester leaves a review */
 
