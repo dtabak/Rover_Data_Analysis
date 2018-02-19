@@ -27,6 +27,7 @@ date,booking_total,gross_billings,net_revenue
 2016-12,315108,334175,76738
 2016-11,277119,292237,64742
 2016-10,274443,287815,62287
+
 2016-09,250962,263247,56867
 2016-08,230309,241433,50592
 2016-07,193232,202623,41621
@@ -89,3 +90,28 @@ date,booking_total,gross_billings,net_revenue,take_rate
 2015-08,11621,11853,1976,17
 2015-07,1035,1056,176,17
 
+Why did take rate have an upward trend? 
+
+- Owner fees increased. 
+
+select strftime('%Y-%m', c.added ) date ,p.fee from conversations_conversation c
+join people_person p
+on c.requester_id = p.id
+group by date
+order by date asc
+
+- Service fees increased. 
+
+select strftime('%Y-%m', c.added ) date ,s.fee from conversations_conversation c
+join services_service s
+on c.service_id = s.id
+group by date
+order by date asc
+
+- Conversations involved in more pets by time. 
+
+select strftime('%Y-%m', c.added ) date, count(p.pet_id) from conversations_conversation c
+join conversations_conversation_pets p
+on c.id = p.conversation_id
+group by date
+order by date asc
